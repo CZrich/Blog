@@ -2,54 +2,27 @@
 const today = new Date();
 ---
 
-<footer class="bg-slate-900 text-slate-300 mt-20">
-	<div class="max-w-6xl mx-auto px-4 py-10">
-		<div
-			class="flex flex-col md:flex-row items-center justify-between gap-6"
-		>
-			<!-- Texto -->
-			<div class="text-center md:text-left">
-				<p class="text-sm">
-					© {today.getFullYear()} · Blog de Aspectos Formales de Especificación
-					y Verificación
-				</p>
-				<p class="text-xs text-slate-400 mt-1">
-					Proyecto académico desarrollado con Astro y Tailwind CSS
-				</p>
-			</div>
+<footer class="bg-white text-slate-600 mt-24 border-t border-slate-100">
+    <div class="max-w-3xl mx-auto px-6 py-12"> <div class="flex flex-col items-center gap-4 text-center">
+            
+            <p class="text-base font-medium text-slate-800">
+                Gracias por leer <span class="text-red-500 animate-pulse">❤️</span>
+            </p>
 
-			<!-- Enlaces -->
-			<div class="flex gap-6">
-				<a
-					href="https://astro.build"
-					target="_blank"
-					class="hover:text-indigo-400 transition"
-				>
-					Astro
-				</a>
-				<a
-					href="https://tailwindcss.com"
-					target="_blank"
-					class="hover:text-indigo-400 transition"
-				>
-					Tailwind CSS
-				</a>
-				<a
-					href="https://www.oracle.com/java/"
-					target="_blank"
-					class="hover:text-indigo-400 transition"
-				>
-					Java
-				</a>
-			</div>
-		</div>
+            <div class="space-y-1">
+                <p class="text-sm tracking-tight">
+                    © {today.getFullYear()} · Blog de Aspectos Formales
+                </p>
+                <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">
+                    Proyecto Académico · Universidad
+                </p>
+            </div>
+        </div>
 
-		<!-- Línea inferior -->
-		<div class="border-t border-slate-700 mt-8 pt-4 text-center">
-			<p class="text-xs text-slate-500">
-				Curso: Aspectos Formales de Especificación y Verificación ·
-				Universidad
-			</p>
-		</div>
-	</div>
+        <div class="mt-10 pt-6 border-t border-slate-50 text-center">
+            <p class="text-xs text-slate-400 italic">
+                Curso: Aspectos Formales de Especificación y Verificación
+            </p>
+        </div>
+    </div>
 </footer>

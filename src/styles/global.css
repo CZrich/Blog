@@ -1,39 +1,74 @@
 @import "tailwindcss";
-@font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+/* ... tus @font-face se mantienen igual ... */
 
 :root {
-  --font-main: 'Atkinson', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-main: 'Atkinson', system-ui, sans-serif;
+  /* Colores suaves para mejorar el contraste */
+  --text-main: #2d3748; 
+  --text-muted: #4a5568;
 }
 
-html,
-body {
+html, body {
   font-family: var(--font-main);
+  color: var(--text-main);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+/* Estilo para el contenedor del blog (importante para la legibilidad) */
+.blog-container {
+  max-width: 720px; /* Evita que las líneas sean demasiado largas */
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-p, li {
-  line-height: 1.7;
-  font-weight: 400;
-}
+/* Mejora de la Tipografía en el contenido */
 .prose {
-  font-family: var(--font-main);
-  font-size: 1rem;
+  font-size: 1.125rem; /* 18px es el estándar actual para lectura cómoda */
+  line-height: 1.8;    /* Más espacio entre líneas */
+  color: var(--text-muted);
+}
+
+/* Títulos con más "aire" */
+h1, h2, h3 {
+  color: #1a202c;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { 
+  font-size: 1.875rem; 
+  border-bottom: 2px solid #edf2f7; /* Una línea sutil para separar secciones */
+  padding-bottom: 0.5rem;
+}
+
+/* Párrafos con espaciado consistente */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo para las listas */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para bloques de código o notas (si usas Markdown) */
+blockquote {
+  border-left: 4px solid #6366f1;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #4a5568;
+  margin: 2rem 0;
+}
+
+strong {
+  color: #1a202c; /* Negritas un poco más oscuras que el texto normal */
 }
